@@ -39,6 +39,14 @@ console.log(pets);
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
+/*RISPOSTA
+*/
+
+const slice1 = pets.slice(0)[0];
+pets.push(slice1)
+console.log(pets);
+
+
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
@@ -62,11 +70,45 @@ const cars = [
     trims: ['life', 'style', 'r-line'],
   },
 ]
+/*RISPOSTA
+*/
+
+for (let index = 0; index < cars.length; index++) {
+  cars[index].licencePlate 
+  
+}
+console.log(cars);
 
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
+
+/*RISPOSTA
+*/
+
+const Kia = {
+  brand: 'kia',
+  model: 'sportage',
+  color: 'blue',
+  trims: ['life', 'Gt']
+
+}
+
+cars.push(Kia)
+
+console.log(cars);
+
+for (let index = 0; index < cars.length; index++) {
+  const car1 = cars[index];
+  if (cars.trims && car1.trims.length > 0) {
+    cars.trims.pop()
+    
+  }
+}
+
+console.log(cars);
+
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
